@@ -1,6 +1,5 @@
 var toRoman = function(num) {
   switch (true) {
-    case num < 1 : return "";
     case num >= 1000 : return "M" + toRoman(num - 1000);
     case num >= 900 : return "CM" + toRoman(num - 900);
     case num >= 500 : return "D" + toRoman(num - 500);
@@ -14,6 +13,7 @@ var toRoman = function(num) {
     case num >= 5 : return "V" + toRoman(num - 5);
     case num >= 4 : return "IV" + toRoman(num - 4);
     case num >= 1 : return "I" + toRoman(num - 1);
+    default : return "";
   }
 };
 
